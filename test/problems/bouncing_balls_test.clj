@@ -8,10 +8,10 @@
 ; If all three conditions above are fulfilled, return a positive integer, otherwise return -1.
 
 (deftest success-examples
-  (are [h  bounce window answer] (= (bouncing-balls h bounce window) answer)
-        3  0.66   1.5    3
-        30 0.66   1.5    15
-        10 0.1    9      1))
+  (are [ h bounce window answer] (= (bouncing-balls h bounce window) answer)
+         3   0.66    1.5      3
+        30   0.66    1.5     15
+        10    0.1      9      1))
 
 (deftest fail-examples
   (testing "Bounce is 1 or greater"

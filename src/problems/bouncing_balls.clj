@@ -1,6 +1,9 @@
+; https://www.codewars.com/kata/5544c7a5cb454edb3c000047
+; Bouncing Balls
+
 (ns problems.bouncing-balls)
 
-(defn valid-variables?
+(defn valid?
   [h bounce window]
   (and (> h 0)
        (> h window)
@@ -17,6 +20,6 @@
 
 (defn bouncing-balls 
   [h bounce window]
-  (if (valid-variables? h bounce window)
+  (if (valid? h bounce window)
     (count-bouncing h bounce window)
     -1))
