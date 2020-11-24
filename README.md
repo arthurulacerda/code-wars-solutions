@@ -1,6 +1,6 @@
 # code-wars-solutions
 
-Repository for code-wars website problem solutions
+Repository for code-wars website problem solutions in clojure
 
 ## Tests
 
@@ -11,7 +11,7 @@ lein test
 
 To run test for a specific namespace
 ```
-lein test :only :specific.namespace
+lein test :only specific.namespace
 ```
 
 ## License
