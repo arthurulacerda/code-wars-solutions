@@ -3,16 +3,9 @@
 
 (ns problems.find-the-odd-int)
 
-(def finc (fnil inc 0))
-
-(defn assoc-inc
-  [map key]
-  (assoc map key (finc (get map key))))
-
 (defn find-odd
   [xs]
   (->> xs
-       (reduce assoc-inc {})
+       frequencies
        (filter #(odd? (last %)))
-       first
-       first))
+       ffirst))
