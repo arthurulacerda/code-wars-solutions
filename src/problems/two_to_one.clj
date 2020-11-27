@@ -1,3 +1,6 @@
+; https://www.codewars.com/kata/5656b6906de340bd1b0000ac
+; Two to One
+
 (ns problems.two-to-one
   (:require [clojure.string :as s]
             [clojure.set :as set]))
