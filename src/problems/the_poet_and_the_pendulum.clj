@@ -4,15 +4,11 @@
 (ns problems.the-poet-and-the-pendulum)
 
 (defn pendulum 
-  ([numbers]
-   (vec (pendulum (reverse (sort numbers)) (even? (count numbers)))))
-  ([numbers right?]
-   (if-let [next-value   (first numbers)]
-     (if right?
-       (concat (pendulum (rest numbers) (not right?)) [next-value])
-       (concat [next-value] (pendulum (rest numbers) (not right?))))
-     [])))
+  [numbers]
+  (let [sorted-numbers (sort numbers)
+        first-half     (reverse (take-nth 2 sorted-numbers))
+        last-half    (take-nth 2 (rest sorted-numbers))]
+    (concat first-half last-half)))
 
-(pendulum [4 10 9])
 
 
