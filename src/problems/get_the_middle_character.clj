@@ -9,6 +9,3 @@
     (if (even? size)
       (subs word (dec (/ size 2)) (inc (/ size 2)))
       (subs word (/ (dec size) 2) (inc (/ (dec size) 2))))))
-    
-  ; your code
-  
